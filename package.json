@@ -1,0 +1,14 @@
+{
+  "name": "jsp",
+  "version": "1.0.0",
+  "description": "Proyecto de PJS",
+  "scripts": {
+    "start":"live-server"
+  },
+  "keywords": [],
+  "author": "Andre M Merchant Escobar <andremerchant@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
