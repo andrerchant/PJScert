@@ -3,3 +3,5 @@ lib
 mediaplayer
 website
 demo
+.cache
+dist

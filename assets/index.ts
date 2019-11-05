@@ -1,28 +1,26 @@
-import MediaPlayer from '@sparragus/platzimediaplayer';
-import AutoPlay from '@sparragus/platzimediaplayer/lib/plugins/AutoPlay';
-import AutoPause from '@sparragus/platzimediaplayer/lib/plugins/AutoPause';
-import Ads from '@sparragus/platzimediaplayer/lib/plugins/Ads';
+import MediaPlayer from './MediaPlayer';
+import AutoPlay from './plugins/autoplay';
+import Autopause from './plugins/autopause';
 
-const video = document.querySelector('video');
-const player = new MediaPlayer({
-  el: video,
-  plugins: [new AutoPlay(), new AutoPause(), new Ads()],
+const video: HTMLElement = document.querySelector("video")
+const play_btn: HTMLElement = document.querySelector("#playButton");
+const mute_btn: HTMLElement = document.querySelector("#muteButton");
+
+const player = new MediaPlayer({ 
+    el:video,
+    plugins: [
+        new AutoPlay(),
+        new Autopause()
+    ]
 });
 
-const playButton: HTMLElement = document.querySelector('#playButton');
-playButton.onclick = () => player.togglePlay();
+play_btn.onclick = () => player.togglePlay();
+mute_btn.onclick = () => player.toggleMute();
 
-const muteButton: HTMLElement = document.querySelector('#muteButton');
-muteButton.onclick = () => {
-  if (player.media.muted) {
-    player.unmute();
-  } else {
-    player.mute();
-  }
-};
-
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').catch(error => {
-    console.log(error.message);
-  });
+if('serviceWorker' in navigator){
+    navigator.serviceWorker
+        .register('/sw.js')
+        .catch(error => {
+            console.log(error.message);
+        })
 }

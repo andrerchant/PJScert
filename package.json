@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "Proyecto de PJS",
   "scripts": {
-    "start":"live-server"
+    "start": "parcel -p 8000 index.html"
   },
   "keywords": [],
   "author": "Andre M Merchant Escobar <andremerchant@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^3.7.2"
+  },
+  "browserlist": [
+    "last 1 Chrome version",
+    "last 1 Firefox version"
+  ]
 }

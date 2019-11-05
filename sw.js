@@ -10,23 +10,23 @@ self.addEventListener('fetch', event => {
         return;
     }
 
-    event.respondWith(cachedResponse(request))
+    event.respondWith(cachedResponse(request));
 
-    event.waitUntil(updateCache(request))
+    event.waitUntil(updateCache(request));
 })
 
 async function precache(){
     const cache = await caches.open(VERSION)
     return cache.addAll([
-        '/',
+        /* '/',
         '/index.html',
         '/assets/index.js',
         '/assets/MediaPlayer.js',
         '/assets/plugins/autoplay.js',
         '/assets/plugins/autopause.js',
         '/assets/index.css',
-        '/assets/BigBuckBunny.mp4',
-    ])
+        '/assets/BigBuckBunny.mp4', */
+    ]);
 }
 
 async function cachedResponse(request){
