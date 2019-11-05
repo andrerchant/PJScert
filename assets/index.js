@@ -17,3 +17,10 @@ const player = new MediaPlayer({
 play_btn.onclick = () => player.togglePlay();
 mute_btn.onclick = () => player.toggleMute();
 
+if('serviceWorker' in navigator){
+    navigator.serviceWorker
+        .register('/sw.js')
+        .catch(error => {
+            console.log(error.message);
+        })
+}
