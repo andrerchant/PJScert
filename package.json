@@ -13,7 +13,6 @@
     "typescript": "^3.7.2"
   },
   "browserlist": [
-    "last 1 Chrome version",
-    "last 1 Firefox version"
+    "last 2 Chrome version"
   ]
 }

@@ -1,6 +1,7 @@
 import MediaPlayer from './MediaPlayer';
 import AutoPlay from './plugins/autoplay';
 import Autopause from './plugins/autopause';
+import AdsPlugin from './plugins/Ads/index';
 
 const video: HTMLElement = document.querySelector("video")
 const play_btn: HTMLElement = document.querySelector("#playButton");
@@ -10,7 +11,8 @@ const player = new MediaPlayer({
     el:video,
     plugins: [
         new AutoPlay(),
-        new Autopause()
+        new Autopause(),
+        new AdsPlugin()
     ]
 });
 
