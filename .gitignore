@@ -2,6 +2,7 @@ node_modules
 lib
 mediaplayer
 website
-demo
+demo/mediaplayer
+demo/website
 .cache
 dist
