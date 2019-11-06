@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Proyecto de PJS",
   "scripts": {
-    "start": "parcel -p 8000 index.html ejercicios/index.html ejercicios/**/*.html"
+    "start": "parcel -p 8000 index.html demo/ejercicios/index.html demo/ejercicios/**/*.html"
   },
   "keywords": [],
   "author": "Andre M Merchant Escobar <andremerchant@gmail.com>",
